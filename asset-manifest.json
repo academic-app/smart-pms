@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/smart-pms/static/css/main.5f361e03.chunk.css",
+    "main.js": "/smart-pms/static/js/main.111719a0.chunk.js",
+    "main.js.map": "/smart-pms/static/js/main.111719a0.chunk.js.map",
+    "runtime-main.js": "/smart-pms/static/js/runtime-main.187645da.js",
+    "runtime-main.js.map": "/smart-pms/static/js/runtime-main.187645da.js.map",
+    "static/js/2.5623fefa.chunk.js": "/smart-pms/static/js/2.5623fefa.chunk.js",
+    "static/js/2.5623fefa.chunk.js.map": "/smart-pms/static/js/2.5623fefa.chunk.js.map",
+    "index.html": "/smart-pms/index.html",
+    "precache-manifest.5eabec0d6e214fe50e2354bae7a32961.js": "/smart-pms/precache-manifest.5eabec0d6e214fe50e2354bae7a32961.js",
+    "service-worker.js": "/smart-pms/service-worker.js",
+    "static/css/main.5f361e03.chunk.css.map": "/smart-pms/static/css/main.5f361e03.chunk.css.map",
+    "static/js/2.5623fefa.chunk.js.LICENSE.txt": "/smart-pms/static/js/2.5623fefa.chunk.js.LICENSE.txt",
+    "static/media/logo.svg": "/smart-pms/static/media/logo.5d5d9eef.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.187645da.js",
+    "static/js/2.5623fefa.chunk.js",
+    "static/css/main.5f361e03.chunk.css",
+    "static/js/main.111719a0.chunk.js"
+  ]
+}
