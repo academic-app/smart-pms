@@ -2,7 +2,7 @@
 ## Todo:
 * Clone Repository (One Time Activity)
 ```bash
-git clone 
+git clone https://github.com/academic-app/smart-task-management-system.git
 ```
 * Run on Localhost
 ```bash
