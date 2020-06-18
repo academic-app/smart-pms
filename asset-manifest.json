@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/smart-pms/static/css/main.5f361e03.chunk.css",
-    "main.js": "/smart-pms/static/js/main.111719a0.chunk.js",
-    "main.js.map": "/smart-pms/static/js/main.111719a0.chunk.js.map",
-    "runtime-main.js": "/smart-pms/static/js/runtime-main.187645da.js",
-    "runtime-main.js.map": "/smart-pms/static/js/runtime-main.187645da.js.map",
-    "static/js/2.5623fefa.chunk.js": "/smart-pms/static/js/2.5623fefa.chunk.js",
-    "static/js/2.5623fefa.chunk.js.map": "/smart-pms/static/js/2.5623fefa.chunk.js.map",
-    "index.html": "/smart-pms/index.html",
-    "precache-manifest.5eabec0d6e214fe50e2354bae7a32961.js": "/smart-pms/precache-manifest.5eabec0d6e214fe50e2354bae7a32961.js",
-    "service-worker.js": "/smart-pms/service-worker.js",
-    "static/css/main.5f361e03.chunk.css.map": "/smart-pms/static/css/main.5f361e03.chunk.css.map",
-    "static/js/2.5623fefa.chunk.js.LICENSE.txt": "/smart-pms/static/js/2.5623fefa.chunk.js.LICENSE.txt",
-    "static/media/logo.svg": "/smart-pms/static/media/logo.5d5d9eef.svg"
+    "main.css": "/smart-task-management-system/static/css/main.5f361e03.chunk.css",
+    "main.js": "/smart-task-management-system/static/js/main.04b66286.chunk.js",
+    "main.js.map": "/smart-task-management-system/static/js/main.04b66286.chunk.js.map",
+    "runtime-main.js": "/smart-task-management-system/static/js/runtime-main.31499ef9.js",
+    "runtime-main.js.map": "/smart-task-management-system/static/js/runtime-main.31499ef9.js.map",
+    "static/js/2.5623fefa.chunk.js": "/smart-task-management-system/static/js/2.5623fefa.chunk.js",
+    "static/js/2.5623fefa.chunk.js.map": "/smart-task-management-system/static/js/2.5623fefa.chunk.js.map",
+    "index.html": "/smart-task-management-system/index.html",
+    "precache-manifest.ee3c01cdcf9742b8b5efb9ebf032b31b.js": "/smart-task-management-system/precache-manifest.ee3c01cdcf9742b8b5efb9ebf032b31b.js",
+    "service-worker.js": "/smart-task-management-system/service-worker.js",
+    "static/css/main.5f361e03.chunk.css.map": "/smart-task-management-system/static/css/main.5f361e03.chunk.css.map",
+    "static/js/2.5623fefa.chunk.js.LICENSE.txt": "/smart-task-management-system/static/js/2.5623fefa.chunk.js.LICENSE.txt",
+    "static/media/logo.svg": "/smart-task-management-system/static/media/logo.5d5d9eef.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.187645da.js",
+    "static/js/runtime-main.31499ef9.js",
     "static/js/2.5623fefa.chunk.js",
     "static/css/main.5f361e03.chunk.css",
-    "static/js/main.111719a0.chunk.js"
+    "static/js/main.04b66286.chunk.js"
   ]
 }
