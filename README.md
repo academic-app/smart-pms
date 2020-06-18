@@ -12,4 +12,4 @@ npm start
 ```bash
 npm run deploy
 ```
-#Note: It is hosted remotely on: ```https://academic-app.github.io/smart-task-management-system/```
+#Note: It is hosted remotely on: [https://academic-app.github.io/smart-task-management-system/](https://academic-app.github.io/smart-task-management-system/)
