@@ -25,7 +25,7 @@ class App extends Component{
                 string = string + chars[i];
                 this.displayString(string);
                 if(chars[i] === '.' && i < this.services.length-1){
-                    string = string + '<br/><br/><i class=\"fa fa-hand-o-right\"/> ';
+                    string = string + "<br/><br/><i class=\"fa fa-hand-o-right\"/> ";
                     this.displayString(string);
                 }
                 i++;

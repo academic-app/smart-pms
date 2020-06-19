@@ -4,6 +4,6 @@ import App from './App';
 
 test('renders learn react link', () => {
   const { getByText } = render(<App />);
-  const msgElement = getByText(/Under Construction/i);
+  const msgElement = getByText(/SMART TASK MANAGEMENT/i);
   expect(msgElement).toBeInTheDocument();
 });
