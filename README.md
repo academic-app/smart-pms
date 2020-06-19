@@ -8,7 +8,7 @@ git clone https://github.com/academic-app/smart-task-management-system.git
 ```bash
 npm start
 ```
-* Deploy on Github
+* Deploy on Github [Automated with CI]
 ```bash
 npm run deploy
 ```
