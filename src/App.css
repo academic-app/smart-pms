@@ -1,38 +1,59 @@
 .App {
-  text-align: center;
+  /*text-align: center;*/
 }
 
 .App-logo {
-  height: 40vmin;
+  position: fixed;
+  width: 50%;
+  height: 80%;
   pointer-events: none;
+  left: 25%;
+  top:5%;
+  align-items: center;
+}
+
+#serviceDisplay{
+  width: 30%;
+  position: absolute;
+  top: 28%;
+  left: 10%;
+  color: gray;
+  font-family: "Droid Sans Mono", monospace;
+  font-size: 16pt;
+  text-transform: lowercase;
+  letter-spacing: 1px;
 }
 
 @media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+  /*.App-logo {*/
+  /*  animation: App-logo-spin infinite 20s linear;*/
+  /*}*/
+}
+
+#display-cursor{
+  animation: cursor-blink infinite 0.50s ;
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: #fafafa;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  /*align-items: center;*/
+  /*justify-content: center;*/
   font-size: calc(10px + 2vmin);
-  color: white;
+  /*color: ;*/
 }
 
 .App-link {
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
+@keyframes cursor-blink {
   from {
-    transform: rotate(0deg);
+    color: dimgray;
   }
   to {
-    transform: rotate(360deg);
+    color: #fafafa;
   }
 }
