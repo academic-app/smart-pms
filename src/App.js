@@ -10,8 +10,7 @@ class App extends Component{
                 "Get your activities in track." +
                 "Automation on your ease." +
                 "Analytical Reports for better control." +
-                "Will Be on your service soon." +
-                "Testing...";
+                "Will Be on your service soon.";
     componentDidMount() {
         this.displayServices();
     }
