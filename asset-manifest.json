@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/smart-task-management-system/static/css/main.642245a1.chunk.css",
+    "main.css": "/smart-task-management-system/static/css/main.9ea1508e.chunk.css",
     "main.js": "/smart-task-management-system/static/js/main.d8655e95.chunk.js",
     "main.js.map": "/smart-task-management-system/static/js/main.d8655e95.chunk.js.map",
     "runtime-main.js": "/smart-task-management-system/static/js/runtime-main.214541b9.js",
@@ -9,10 +9,10 @@
     "static/js/2.f93a45c8.chunk.js": "/smart-task-management-system/static/js/2.f93a45c8.chunk.js",
     "static/js/2.f93a45c8.chunk.js.map": "/smart-task-management-system/static/js/2.f93a45c8.chunk.js.map",
     "index.html": "/smart-task-management-system/index.html",
-    "precache-manifest.6039093bbcf6f0de0dff5ed52bc6e2d9.js": "/smart-task-management-system/precache-manifest.6039093bbcf6f0de0dff5ed52bc6e2d9.js",
+    "precache-manifest.4306aef03f9933278677ae82ac0e1433.js": "/smart-task-management-system/precache-manifest.4306aef03f9933278677ae82ac0e1433.js",
     "service-worker.js": "/smart-task-management-system/service-worker.js",
     "static/css/2.0040f42c.chunk.css.map": "/smart-task-management-system/static/css/2.0040f42c.chunk.css.map",
-    "static/css/main.642245a1.chunk.css.map": "/smart-task-management-system/static/css/main.642245a1.chunk.css.map",
+    "static/css/main.9ea1508e.chunk.css.map": "/smart-task-management-system/static/css/main.9ea1508e.chunk.css.map",
     "static/js/2.f93a45c8.chunk.js.LICENSE.txt": "/smart-task-management-system/static/js/2.f93a45c8.chunk.js.LICENSE.txt",
     "static/media/boards.svg": "/smart-task-management-system/static/media/boards.e1a1bef5.svg",
     "static/media/font-awesome.min.css": "/smart-task-management-system/static/media/fontawesome-webfont.fee66e71.woff"
@@ -21,7 +21,7 @@
     "static/js/runtime-main.214541b9.js",
     "static/css/2.0040f42c.chunk.css",
     "static/js/2.f93a45c8.chunk.js",
-    "static/css/main.642245a1.chunk.css",
+    "static/css/main.9ea1508e.chunk.css",
     "static/js/main.d8655e95.chunk.js"
   ]
 }
