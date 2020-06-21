@@ -38,7 +38,7 @@
   font-family: "Droid Sans Mono", monospace;
   font-size: 16pt;
   text-transform: lowercase;
-  letter-spacing: 1px;
+  /*letter-spacing: 1px;*/
 }
 
 #logInBtn, #registerBtn{

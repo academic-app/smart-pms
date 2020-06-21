@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
 import boards from './images/boards.svg';
 import './App.css';
-import $ from 'jquery';
 import 'font-awesome/css/font-awesome.min.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {Button} from 'react-bootstrap';
@@ -13,6 +12,11 @@ class App extends Component{
                 "Get your activities in track." +
                 "Automation on your ease." +
                 "Analytical Reports for better control." ;
+
+    state = {
+        services: null
+    }
+
     componentDidMount() {
         this.displayServices();
     }
@@ -20,27 +24,46 @@ class App extends Component{
     displayServices = () => {
         const chars = this.services.split('');
         let i = 0;
-        let string = "<i class=\"fa fa-hand-o-right\"/> ";
-        this.displayString(string);
+        let string = <span><i className={"fa fa-hand-o-right"}/> </span>;
+        this.updateServices(string);
         const interval = setInterval(()=>{
             if(i < this.services.length) {
-                string = string + chars[i];
-                this.displayString(string);
+                string = this.concatElement(string, chars[i]);
+                this.updateServices(string);
                 if(chars[i] === '.' && i < this.services.length-1){
-                    string = string + "<br/><br/><i class=\"fa fa-hand-o-right\"/> ";
-                    this.displayString(string);
+                    string = this.concatElement(string, <br/>);
+                    // string = this.concatElement(string, <br/>);
+                    string = this.concatElement(string, <span><i className={"fa fa-hand-o-right"}/> </span>);
+                    this.updateServices(string);
                 }
                 i++;
             } else {
-                string = string + "<br/><br/><i class=\"fa fa-hand-o-right\"/> <span class='btn btn-link'>Login</span> or <span class='btn btn-link'>Register</span> to begin.. ";
-                this.displayString(string);
+                string = this.concatElement(string, <br/>);
+                // string = this.concatElement(string, <br/>);
+                string = this.concatElement(string, <span><i className={"fa fa-hand-o-right"}/> </span>);
+                string = this.concatElement(string, <span><span className={'btn btn-link'} onClick={this.handleLogin}>Login</span> or <span className={'btn btn-link'} onClick={this.handleRegister}>Register</span> to begin..</span>);
+                this.updateServices(string);
                 clearInterval(interval);
             }
         },100);
     }
 
-    displayString(string) {
-        $('#serviceDisplay').html(string+"<b id='display-cursor'> _</b>");
+    concatElement = (el1, el2)=>{
+        return <span>{el1}{el2}</span>
+    }
+
+    updateServices = (el) => {
+        this.setState({
+            services : <span>{el} <b id={'display-cursor'}> _</b></span>
+        })
+    }
+
+    handleLogin = () => {
+        alert("to login");
+    }
+
+    handleRegister = () => {
+        alert("to register");
     }
 
     render = () => {
@@ -49,12 +72,16 @@ class App extends Component{
                 <header className="App-header">
                     <h1 id={"app-header"}>SMART TASK MANAGEMENT</h1>
                     <img src={boards} className={"App-logo"} alt="logo" />
-                    <Button id={"logInBtn"} type={"button"} variant={"dark"} className={"mr-2 sm-2"}>Login <i className={"fa fa-sign-in"}/></Button>
-                    <Button id={"registerBtn"} type={"button"} variant={"dark"} className={"mr-2 sm-2"}>Register <i className={"fa fa-id-card"}/></Button>
-                    <span id={"l-logInBtn"}>login</span>
-                    <span id={"l-registerBtn"}>register</span>
+                    {/*for web browsers*/}
+                    <span id={"l-logInBtn"} onClick={this.handleLogin}>login</span>
+                    <span id={"l-registerBtn"} onClick={this.handleRegister}>register</span>
+                    {/*for mobile devices*/}
+                    <Button id={"logInBtn"} type={"button"} variant={"dark"} className={"mr-2 sm-2"} onClick={this.handleLogin}>Login <i className={"fa fa-sign-in"}/></Button>
+                    <Button id={"registerBtn"} type={"button"} variant={"dark"} className={"mr-2 sm-2"} onClick={this.handleRegister}>Register <i className={"fa fa-id-card"}/></Button>
                 </header>
-                <p id={"serviceDisplay"}/>
+                <p id={"serviceDisplay"}>
+                    {this.state.services}
+                </p>
             </div>
         );
     }
