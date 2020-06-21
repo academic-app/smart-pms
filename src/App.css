@@ -2,6 +2,23 @@
   /*text-align: center;*/
 }
 
+.App-header {
+  background-color: #fafafa;
+  min-height: 100vh;
+  font-size: calc(10px + 2vmin);
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+#app-header{
+  color: #555;
+  font-family: "Cantarell", sans-serif;
+  font-weight: 200;
+  margin-left: 50px;
+}
+
 .App-logo {
   position: fixed;
   width: 50%;
@@ -24,31 +41,139 @@
   letter-spacing: 1px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
+#logInBtn, #registerBtn{
+  position: absolute;
+  display: none;
+  right: 10px;
+  z-index: 3;
+}
+
+#l-logInBtn, #l-registerBtn{
+  padding: 2px 10px;
+  font-size: 11pt;
+  color: #fafafa;
+  border-radius: 15px;
+  position: absolute;
+  top:20px;
+  right: 50px;
+  cursor: pointer;
+}
+#l-logInBtn {
+  right: 125px;
+  background-color: blue;
+}
+#l-registerBtn {
+  background-color: brown;
+}
+
+@media only screen and (max-width: 900px) {   /* Tab & Pad */
+  #l-logInBtn, #l-registerBtn{
+    display: none;
+  }
+  #serviceDisplay{
+    width: 60%;
+  }
+  .App-logo {
+    width: 80%;
+    height: 60%;
+    left: 10%;
+    top: -10px;
+  }
+  #logInBtn, #registerBtn{
+    display: block;
+    font-size: 12pt;
+  }
+  #registerBtn{
+    margin-top: 50px;
+  }
+}
+@media only screen and (max-width: 600px) { /* mobile phones */
+  #serviceDisplay{
+    width: 80%;
+    top: 28%;
+  }
+  #app-header{
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  #logInBtn, #registerBtn{
+    display: block;
+    font-size: 10pt;
+  }
+  #registerBtn{
+    margin-top: 40px;
+  }
+}
+@media only screen and (max-width: 250px) { /* small screen devices */
+  #logInBtn{
+    right: 100px;
+    font-size: 9pt;
+  }
+  #registerBtn{
+    right: 10px;
+    font-size: 9pt;
+    margin-top: 0px;
+  }
+}
+
+@media only screen and (max-height: 500px) {  /* landscape mode */
+  .App-logo {
+    height: 90%;
+    top: 10px;
+  }
+
+  @media (max-width: 600px) { /* mobile devices in landscape mode */
+    #serviceDisplay {
+      top: 50%;
+    }
+    #logInBtn{
+      right: 110px;
+    }
+    #registerBtn{
+      right: 10px;
+      margin-top: 0px;
+    }
+  }
+
+  @media (max-width: 250px) { /* small screen devices in landscape mode */
+    .App-logo {
+      height: 110%;
+      top: 20px;
+    }
+    #serviceDisplay {
+      top: 60%;
+    }
+    #logInBtn{
+      right: 110px;
+    }
+    #registerBtn{
+      right: 10px;
+      margin-top: 0px;
+    }
+  }
+}
+
+@media (max-height: 300px) or (max-width: 300px) {  /* Unexpected & Unsupported screen size */
+  .App{
+    display: none;
+  }
+  #failure-message{
+    display: block;
+  }
+}
+
+/*@media (prefers-reduced-motion: no-preference) {*/
   /*.App-logo {*/
   /*  animation: App-logo-spin infinite 20s linear;*/
   /*}*/
-}
+/*}*/
 
+/*cursor blink animation*/
 #display-cursor{
   animation: cursor-blink infinite 0.50s ;
 }
 
-.App-header {
-  background-color: #fafafa;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  /*align-items: center;*/
-  /*justify-content: center;*/
-  font-size: calc(10px + 2vmin);
-  /*color: ;*/
-}
-
-.App-link {
-  color: #61dafb;
-}
-
+/*cursor blink animation*/
 @keyframes cursor-blink {
   from {
     color: dimgray;
