@@ -1,0 +1,33 @@
+.serviceBroadcastArea{
+    width: 30%;
+    position: absolute;
+    top: 28%;
+    left: 10%;
+    color: gray;
+    font-family: "Droid Sans Mono", monospace;
+    font-size: 16pt;
+    text-transform: lowercase;
+}
+@media only screen and (max-width: 900px) {  /* Tab & Pad */
+    .serviceBroadcastArea {
+        width: 60%;
+    }
+}
+@media only screen and (max-width: 600px) {  /* mobile phones */
+    .serviceBroadcastArea {
+        width: 80%;
+        top: 28%;
+    }
+}
+@media only screen and (max-height: 500px) {  /* landscape mode */
+    @media (max-width: 600px) {  /* mobile devices in landscape mode */
+        .serviceBroadcastArea {
+            top: 50%;
+        }
+    }
+    @media (max-width: 250px) {  /* small screen devices in landscape mode */
+        .serviceBroadcastArea {
+            top: 60%;
+        }
+    }
+}
