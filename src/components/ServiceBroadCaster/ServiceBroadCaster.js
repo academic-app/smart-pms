@@ -30,7 +30,7 @@ class ServiceBroadCaster extends Component {
             } else {
                 string = this.concatElement(string, <br/>);
                 string = this.concatElement(string, <React.Fragment><i className={"fa fa-hand-o-right"}/> </React.Fragment>);
-                string = this.concatElement(string, <React.Fragment><span className={'btn btn-link'} onClick={this.handleLogin}>Login</span> or <span className={'btn btn-link'} onClick={this.handleRegister}>Register</span> to begin..</React.Fragment>);
+                string = this.concatElement(string, <React.Fragment><span className={'btn btn-link'} onClick={this.props.handleLogin}>Login</span> or <span className={'btn btn-link'} onClick={this.props.handleRegister}>Register</span> to begin..</React.Fragment>);
                 this.updateServices(string);
                 clearInterval(interval);
             }

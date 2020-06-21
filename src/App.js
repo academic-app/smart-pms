@@ -49,15 +49,17 @@ class App extends Component{
                         <LoginForm
                             onLoginCancelled={this.cancelLogin}
                             onLogin={this.onLogin}
-                            onLoginWithGoogle={this.onLoginWithGoogle}/>
+                            onLoginWithGoogle={this.onLoginWithGoogle} />
                     )
                 }
                 <ServiceBroadCaster services={[
-                    "Smart Management of tasks you care.",
-                    "Get your activities in track.",
-                    "Automation on your ease.",
-                    "Analytical Reports for better control."
-                ]} />
+                                        "Smart Management of tasks you care.",
+                                        "Get your activities in track.",
+                                        "Automation on your ease.",
+                                        "Analytical Reports for better control."
+                                    ]}
+                                    handleLogin={this.handleLogin}
+                                    handleRegister={this.handleRegister} />
             </div>
         );
     }
