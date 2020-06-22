@@ -6,6 +6,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import {Button} from 'react-bootstrap';
 import LoginForm from "./components/Login/LoginForm";
 import ServiceBroadCaster from "./components/ServiceBroadCaster/ServiceBroadCaster";
+import {app, base, googleAuthProvider} from "./base";
 
 class App extends Component{
 
@@ -65,7 +66,30 @@ class App extends Component{
     }
 
     onLogin = (loginInfo) => {
-        console.log(loginInfo);
+        app.auth().fetchSignInMethodsForEmail(loginInfo.user).then((providers) => {
+            if(providers.length === 0){
+                // return app.auth().createUserWithEmailAndPassword(loginInfo.user, this.state.password);
+                return false;
+            }else if(providers.indexOf("password") === -1){
+                return null;
+                // used other sign in method
+            }else{
+                return app.auth().signInWithEmailAndPassword(loginInfo.user, loginInfo.password);
+            }
+        }).then(response=>{
+            if(response === null){
+                alert("user other method for login");
+            }else if (response === false){
+                alert("username or password not valid");
+            }else if ('user' in response){
+                alert("You are now logged In");
+                console.log(response);
+                // this.setState({
+                //     ...this.state,
+                //     authenticated: true
+                // })
+            }
+        }).catch(error=>console.log(error));
     }
 
     onLoginWithGoogle = () => {

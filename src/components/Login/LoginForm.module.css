@@ -21,7 +21,7 @@
     position: relative;
     margin-top: 80px;
     margin-left: 92px;
-    z-index: 3;
+    z-index: 7;
     width: 210px;
     height: 28px;
     background-color: transparent;
@@ -48,7 +48,7 @@
     position: absolute;
     margin-top: 70px;
     right: 160px;
-    z-index: 3;
+    z-index: 6;
     color: white;
 }
 
