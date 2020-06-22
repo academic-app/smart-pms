@@ -1,7 +1,6 @@
 // Firebase App (the core Firebase SDK) is always required and
 // must be listed before other Firebase SDKs
 import * as firebase from "firebase/app";
-import rebase from "re-base";
 
 // Add the Firebase services that you want to use
 import "firebase/auth";
@@ -21,7 +20,13 @@ const firebaseConfig = {
 };
 // Initialize Firebase
 const app = firebase.initializeApp(firebaseConfig);
-const base = rebase.createClass(app.database());
+const base = firebase.database();
 const googleAuthProvider = new firebase.auth.GoogleAuthProvider();
+let currentUserId = null;
+firebase.auth().onAuthStateChanged((user)=>{
+    if(user){
+        currentUserId = user.uid;
+    }
+})
 firebase.analytics();
-export {app, base, googleAuthProvider};
+export {app, base, googleAuthProvider, currentUserId};

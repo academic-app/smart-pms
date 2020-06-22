@@ -1,0 +1,131 @@
+.Form{
+    position: absolute;
+    top: 55px;
+    right: 100px;
+    height: 370px;
+    z-index: 2;
+    padding: 10px;
+}
+
+.Layout{
+    position: absolute;
+    width: 400px;
+    height: 500px;
+    pointer-events: none;
+}
+
+.name, .username,
+.email, .password,
+.confirm, .register, .sso{
+    position: relative;
+    margin-top: 77px;
+    margin-left: 96px;
+    width: 207px;
+    height: 33px;
+    background-color: transparent;
+    border-radius: 13px;
+    border: 0 solid transparent;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+}
+
+.username{
+    margin-top: 7px;
+}
+
+.email{
+    margin-top: 8px;
+}
+
+.password{
+    margin-top: 9px;
+}
+
+.confirm{
+    margin-top: 8px;
+}
+
+.register{
+    margin-top: 13px;
+    border-radius: 15px;
+}
+
+.sso{
+    margin-top: 20px;
+    border-radius: 15px;
+}
+
+.cancel{
+    position: absolute;
+    margin-top: 50px;
+    right: 60px;
+    color: white;
+}
+
+
+@media only screen and (max-width: 569px) {
+    .Form {
+        top: 80px;
+    }
+}
+
+@media only screen and (max-height: 200px),
+only screen and (max-width: 380px) { /* extreme small height */
+    .Layout {
+        display: none;
+    }
+    .Form{
+        background-color: #30308b;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 11;
+    }
+
+    .name, .username,
+    .email, .password,
+    .confirm, .register, .sso{
+        margin-top: 5px;
+        left: -30px;
+        width: 65%;
+        height: 33px;
+        background-color: whitesmoke;
+        border-radius: 13px;
+        border: 0 solid transparent;
+        border-left: 5px solid transparent;
+        border-right: 5px solid transparent;
+    }
+
+    .username{
+        margin-top: 7px;
+    }
+
+    .email{
+        margin-top: 8px;
+    }
+
+    .password{
+        margin-top: 9px;
+    }
+
+    .confirm{
+        margin-top: 8px;
+    }
+
+    .register{
+        margin-top: 13px;
+        border-radius: 15px;
+    }
+
+    .sso{
+        margin-top: 20px;
+        border-radius: 15px;
+    }
+
+    .cancel{
+        position: absolute;
+        margin-top: 60px;
+        right: 160px;
+        color: white;
+    }
+}

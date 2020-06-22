@@ -1,11 +1,11 @@
 import React, {Component} from "react";
-import loginForm from "./login-form.svg";
-import classes from "./LoginForm.module.css"
+import formLayout from "./form-layout.svg";
+import classes from "./login-form.module.css"
 
 class LoginForm extends Component {
 
     state = {
-        user: "",
+        user: this.props.loginEmail,
         password: ""
     }
 
@@ -17,12 +17,15 @@ class LoginForm extends Component {
         })
     }
 
-    onLoginCancelled = () => {
+    clearForm = ()=>{
         this.setState({
-            ...this.state,
             user: "",
             password: ""
         });
+    }
+
+    onLoginCancelled = () => {
+        this.clearForm();
         this.props.onLoginCancelled();
     }
 
@@ -30,12 +33,13 @@ class LoginForm extends Component {
         return (
             <form className={classes.Form} onSubmit={(event) => {
                 event.preventDefault();
-                this.props.onLogin({user: this.state.user, password: this.state.password})
+                this.props.onLogin({user: this.state.user, password: this.state.password});
+                this.clearForm();
             }}>
-                <img src={loginForm} className={classes.Layout}  alt={"login-form-layout"} />
-                <input type={"text"} name={"user"} className={classes.user} placeholder={"Username or Email"} onChange={this.loginInfoChanged} value={this.state.user}/>
-                <input type={"password"} name={"password"} className={classes.password} placeholder={"Password"} onChange={this.loginInfoChanged} value={this.state.password}/>
-                <button type={"submit"} className={classes.login}>LOGIN</button>
+                <img src={formLayout} className={classes.Layout}  alt={"login-form-layout"} />
+                <input type={"email"} name={"user"} className={classes.user} placeholder={"Email"} onChange={this.loginInfoChanged} value={this.state.user}/><br/>
+                <input type={"password"} name={"password"} className={classes.password} placeholder={"Password"} onChange={this.loginInfoChanged} value={this.state.password}/><br/>
+                <button type={"submit"} className={classes.login}>LOGIN</button><br/>
                 <button type={"button"} className={classes.sso} onClick={this.props.onLoginWithGoogle}><i style={{
                     "color":"#4285f4",
                     backgroundColor: "white",
