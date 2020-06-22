@@ -64,7 +64,8 @@
     }
 }
 
-@media only screen and (max-height: 200px) { /* extreme small height */
+@media only screen and (max-height: 200px),
+        only screen and (max-width: 380px) { /* extreme small height */
     .Layout {
         display: none;
     }
