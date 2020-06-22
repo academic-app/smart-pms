@@ -4,6 +4,7 @@
     top: 55px;
     height: 500px;
     right: 50px;
+    z-index: 4;
 }
 
 .Layout{
@@ -60,5 +61,52 @@
     .Form {
         top: 120px;
         right: 0;
+    }
+}
+
+@media only screen and (max-height: 200px) { /* extreme small height */
+    .Layout {
+        display: none;
+    }
+    .Form{
+        background-color: #8a2a8a;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 6;
+    }
+    .user, .password,
+    .login, .sso{
+        margin-top: 0;
+        z-index: 3;
+        left: -30px;
+        width: 65%;
+        height: 28px;
+        background-color: whitesmoke;
+        border: 5px solid whitesmoke;
+        border-radius: 10px;
+    }
+
+    .user{
+        top: 20px;
+    }
+
+    .password{
+        margin-top: 28px;
+    }
+
+    .login,.sso{
+        margin-top: 10px;
+        height: 35px;
+        font-weight: bolder;
+    }
+
+    .cancel{
+        position: relative;
+        margin-top: 10px;
+        left: 60px;
+        width: 65%;
+        z-index: 3;
+        color: white;
     }
 }

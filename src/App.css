@@ -13,10 +13,12 @@
 }
 
 #app-header{
+  position: relative;
   color: #555;
   font-family: "Cantarell", sans-serif;
   font-weight: 200;
   margin-left: 50px;
+  z-index: 2;
 }
 
 .App-logo {
@@ -27,13 +29,14 @@
   left: 25%;
   top:5%;
   align-items: center;
+  z-index: 0;
 }
 
 #logInBtn, #registerBtn{
   position: absolute;
   display: none;
   right: 10px;
-  z-index: 3;
+  z-index: 5;
 }
 
 #l-logInBtn, #l-registerBtn{
@@ -45,6 +48,7 @@
   top:20px;
   right: 200px;
   cursor: pointer;
+  z-index: 5;
 }
 #l-logInBtn {
   right: 275px;
@@ -54,7 +58,24 @@
   background-color: brown;
 }
 
-@media only screen and (max-width: 900px) {   /* Tab & Pad */
+
+/*cursor blink animation*/
+#display-cursor{
+  animation: cursor-blink infinite 0.50s ;
+}
+
+/*cursor blink animation*/
+@keyframes cursor-blink {
+  from {
+    color: dimgray;
+  }
+  to {
+    color: #fafafa;
+  }
+}
+
+/*Portrait Modes*/
+@media only screen and (max-width: 900px) {   /* screen width: Tab or less */
   #l-logInBtn, #l-registerBtn{
     display: none;
   }
@@ -72,7 +93,7 @@
     margin-top: 50px;
   }
 }
-@media only screen and (max-width: 600px) { /* mobile phones */
+@media only screen and (max-width: 600px) { /* screen width: mobile phones or less */
   #app-header{
     margin-left: 10px;
     margin-right: 10px;
@@ -85,72 +106,141 @@
     margin-top: 40px;
   }
 }
-@media only screen and (max-width: 250px) { /* small screen devices */
+@media only screen and (max-width: 300px) { /* screen width: small screen devices */
+  #app-header{
+    font-size: 180%;
+  }
   #logInBtn{
-    right: 100px;
-    font-size: 9pt;
+    font-size: 8pt;
   }
   #registerBtn{
-    right: 10px;
-    font-size: 9pt;
-    margin-top: 0px;
+    font-size: 8pt;
+    margin-top: 33px;
   }
 }
 
-@media only screen and (max-height: 500px) {  /* landscape mode */
-  .App-logo {
-    height: 90%;
-    top: 10px;
+/* landscape modes */
+@media only screen and (max-width: 900px) { /* tab in landscape mode */
+  @media (max-height: 700px) {
+    .App-logo {
+      height: 90%;
+      top: 10px;
+    }
   }
-
-  @media (max-width: 600px) { /* mobile devices in landscape mode */
-    #logInBtn{
+}
+@media only screen and (max-width: 600px) { /* mobile devices in landscape mode */
+  @media (max-height: 600px) {
+    #logInBtn {
       right: 110px;
     }
-    #registerBtn{
+    #registerBtn {
       right: 10px;
-      margin-top: 0px;
+      margin-top: 0;
     }
   }
-
-  @media (max-width: 250px) { /* small screen devices in landscape mode */
+}
+@media only screen and (max-width: 537px) { /* mobile devices II in landscape mode*/
+  @media (max-height: 340px) {
+    #logInBtn, #registerBtn {
+      top: 27%;
+    }
+    #app-header{
+      width: 60%;
+      font-size: 200%;
+    }
+  }
+}
+@media only screen and (max-width: 390px) { /* mobile devices III in landscape mode*/
+  @media (max-height: 250px) {
+    #logInBtn, #registerBtn {
+      top: -2px;
+      font-size: 7pt;
+    }
+    #logInBtn{
+      right: 76px;
+    }
+    #registerBtn{
+      right: 1px;
+    }
+  }
+}
+@media only screen and (max-width: 300px) { /* small screen devices in landscape mode */
+  @media (max-height: 700px) {
     .App-logo {
-      height: 110%;
+      height: 47%;
+      top: 5%;
+    }
+  }
+  @media (max-height: 600px) {
+    #logInBtn{
+      /*right: 83px;*/
+      right: 10px;
+      font-size: 8pt;
+    }
+    #registerBtn{
+      /*right: 1px;*/
+      font-size: 8pt;
+      margin-top: 33px;
+    }
+  }
+  @media (max-height: 500px) {
+    .App-logo {
+      height: 80%;
       top: 20px;
     }
     #logInBtn{
-      right: 110px;
+      right: 83px;
     }
     #registerBtn{
-      right: 10px;
-      margin-top: 0px;
+      right: 1px;
+      margin-top: 0;
+    }
+  }
+  @media (max-height: 340px) {
+    #logInBtn, #registerBtn {
+      top: 70px;
+    }
+    #app-header{
+      width: 100%;
+      font-size: 180%;
+    }
+  }
+
+  @media (max-height: 195px) {
+    #logInBtn, #registerBtn {
+      top: 38%;
+      padding: 2px 5px;
+    }
+    #logInBtn{
+      right: 70px;
+    }
+    #app-header{
+      width: 100%;
+      font-size: 180%;
+    }
+  }
+
+  @media (max-height: 135px) {
+    #logInBtn{
+      top:-5px;
+      right: 1px;
+    }
+    #registerBtn{
+      top:18px;
+    }
+    #app-header{
+      width: 70%;
+      font-size: 180%;
     }
   }
 }
 
-@media (max-height: 300px) or (max-width: 390px) {  /* Unexpected & Unsupported screen size */
+/* Unexpected & Unsupported screen size */
+@media (max-height: 80px) or (max-width: 200px) {
   .App{
     display: none;
   }
-}
-
-/*@media (prefers-reduced-motion: no-preference) {*/
-  /*.App-logo {*/
-  /*  animation: App-logo-spin infinite 20s linear;*/
-  /*}*/
-/*}*/
-
-/*cursor blink animation*/
-#display-cursor{
-  animation: cursor-blink infinite 0.50s ;
-}
-
-/*cursor blink animation*/
-@keyframes cursor-blink {
-  from {
-    color: dimgray;
-  }
-  to {
-    color: #fafafa;
+  #unexpected-screen-alert{
+    display: block;
   }
 }
