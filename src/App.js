@@ -6,7 +6,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import {Button} from 'react-bootstrap';
 import LoginForm from "./components/Login/LoginForm";
 import ServiceBroadCaster from "./components/ServiceBroadCaster/ServiceBroadCaster";
-import {app, base, googleAuthProvider} from "./base";
+import {app} from "./base";
 
 class App extends Component{
 
