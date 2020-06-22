@@ -1,27 +1,27 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "d999f795bce979aebe2787165d2ff0c3",
+    "revision": "7bb738c60c27a004223e546ed71596ab",
     "url": "/smart-task-management-system/index.html"
   },
   {
-    "revision": "83c2faf3c33fbc355c3a",
+    "revision": "ac51ad6cd45dfe1c8aa1",
     "url": "/smart-task-management-system/static/css/2.0040f42c.chunk.css"
   },
   {
-    "revision": "6cd89e6d4c52e1619d76",
-    "url": "/smart-task-management-system/static/css/main.37996907.chunk.css"
+    "revision": "06bca55aa4ef4cd803bd",
+    "url": "/smart-task-management-system/static/css/main.295ae4f6.chunk.css"
   },
   {
-    "revision": "83c2faf3c33fbc355c3a",
-    "url": "/smart-task-management-system/static/js/2.ab324e99.chunk.js"
+    "revision": "ac51ad6cd45dfe1c8aa1",
+    "url": "/smart-task-management-system/static/js/2.dd2a721b.chunk.js"
   },
   {
-    "revision": "5ac48c47bb3912b14c2d8de4f56d5ae8",
-    "url": "/smart-task-management-system/static/js/2.ab324e99.chunk.js.LICENSE.txt"
+    "revision": "fcca2cdcc5e6967026a1ba00172f2d47",
+    "url": "/smart-task-management-system/static/js/2.dd2a721b.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "6cd89e6d4c52e1619d76",
-    "url": "/smart-task-management-system/static/js/main.cc2f444e.chunk.js"
+    "revision": "06bca55aa4ef4cd803bd",
+    "url": "/smart-task-management-system/static/js/main.edf9c80b.chunk.js"
   },
   {
     "revision": "229dd4acbe36cfa586d0",

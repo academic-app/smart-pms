@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/smart-task-management-system/static/css/main.37996907.chunk.css",
-    "main.js": "/smart-task-management-system/static/js/main.cc2f444e.chunk.js",
-    "main.js.map": "/smart-task-management-system/static/js/main.cc2f444e.chunk.js.map",
+    "main.css": "/smart-task-management-system/static/css/main.295ae4f6.chunk.css",
+    "main.js": "/smart-task-management-system/static/js/main.edf9c80b.chunk.js",
+    "main.js.map": "/smart-task-management-system/static/js/main.edf9c80b.chunk.js.map",
     "runtime-main.js": "/smart-task-management-system/static/js/runtime-main.214541b9.js",
     "runtime-main.js.map": "/smart-task-management-system/static/js/runtime-main.214541b9.js.map",
     "static/css/2.0040f42c.chunk.css": "/smart-task-management-system/static/css/2.0040f42c.chunk.css",
-    "static/js/2.ab324e99.chunk.js": "/smart-task-management-system/static/js/2.ab324e99.chunk.js",
-    "static/js/2.ab324e99.chunk.js.map": "/smart-task-management-system/static/js/2.ab324e99.chunk.js.map",
+    "static/js/2.dd2a721b.chunk.js": "/smart-task-management-system/static/js/2.dd2a721b.chunk.js",
+    "static/js/2.dd2a721b.chunk.js.map": "/smart-task-management-system/static/js/2.dd2a721b.chunk.js.map",
     "index.html": "/smart-task-management-system/index.html",
-    "precache-manifest.b031f3d4264ccf4e3baa2004052b3938.js": "/smart-task-management-system/precache-manifest.b031f3d4264ccf4e3baa2004052b3938.js",
+    "precache-manifest.c956a31687293bd7a9c9850d0b0cd8b8.js": "/smart-task-management-system/precache-manifest.c956a31687293bd7a9c9850d0b0cd8b8.js",
     "service-worker.js": "/smart-task-management-system/service-worker.js",
     "static/css/2.0040f42c.chunk.css.map": "/smart-task-management-system/static/css/2.0040f42c.chunk.css.map",
-    "static/css/main.37996907.chunk.css.map": "/smart-task-management-system/static/css/main.37996907.chunk.css.map",
-    "static/js/2.ab324e99.chunk.js.LICENSE.txt": "/smart-task-management-system/static/js/2.ab324e99.chunk.js.LICENSE.txt",
+    "static/css/main.295ae4f6.chunk.css.map": "/smart-task-management-system/static/css/main.295ae4f6.chunk.css.map",
+    "static/js/2.dd2a721b.chunk.js.LICENSE.txt": "/smart-task-management-system/static/js/2.dd2a721b.chunk.js.LICENSE.txt",
     "static/media/boards.svg": "/smart-task-management-system/static/media/boards.e1a1bef5.svg",
     "static/media/font-awesome.min.css": "/smart-task-management-system/static/media/fontawesome-webfont.fee66e71.woff",
     "static/media/login-form.svg": "/smart-task-management-system/static/media/login-form.7b97f5e3.svg"
@@ -21,8 +21,8 @@
   "entrypoints": [
     "static/js/runtime-main.214541b9.js",
     "static/css/2.0040f42c.chunk.css",
-    "static/js/2.ab324e99.chunk.js",
-    "static/css/main.37996907.chunk.css",
-    "static/js/main.cc2f444e.chunk.js"
+    "static/js/2.dd2a721b.chunk.js",
+    "static/css/main.295ae4f6.chunk.css",
+    "static/js/main.edf9c80b.chunk.js"
   ]
 }
