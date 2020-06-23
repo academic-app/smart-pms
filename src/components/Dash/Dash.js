@@ -1,9 +1,55 @@
 import React, {Component} from "react";
+import classes from "./Dash.module.css"
 
 class Dash extends Component {
     render() {
         return (
-            <p className={"App-Workspace"}>Welcome to your Dashboard</p>
+            <div className={"col-md-12 col-sm-12 container " + classes.Dash}>
+                <label style={{
+
+                }}><i className={"fa fa-th-large"}/>&nbsp;<b>Your Project Walls:</b></label>
+                <div className={"row"}>
+                    <div className={"col-lg-3 col-md-4 col-sm-6 col-xs-10 row"}>
+                        <span className={"col-md-11 col-sm-11 col-xs-12 " + classes.WallCard}>Task Management</span>
+                    </div>
+                    <div className={"col-lg-3 col-md-4 col-sm-6 col-xs-10 row"}>
+                        <span className={"col-md-11 col-sm-11 col-xs-12 " + classes.WallCard}>Task Management</span>
+                    </div>
+                    <div className={"col-lg-3 col-md-4 col-sm-6 col-xs-10 row"}>
+                        <span className={"col-md-11 col-sm-11 col-xs-12 " + classes.WallCard}>Task Management</span>
+                    </div>
+                    <div className={"col-lg-3 col-md-4 col-sm-6 col-xs-10 row"}>
+                        <span className={"col-md-11 col-sm-11 col-xs-12 " + classes.WallCard}>Task Management</span>
+                    </div>
+                    <div className={"col-lg-3 col-md-4 col-sm-6 col-xs-10 row"}>
+                        <span className={"col-md-11 col-sm-11 col-xs-12 " + classes.WallCard}>Task Management</span>
+                    </div>
+                    <div className={"col-lg-3 col-md-4 col-sm-6 col-xs-10 row"}>
+                        <span className={"col-md-11 col-sm-11 col-xs-12 " + classes.WallCard}>Task Management</span>
+                    </div>
+                    <div className={"col-lg-3 col-md-4 col-sm-6 col-xs-10 row"}>
+                        <span className={"col-md-11 col-sm-11 col-xs-12 " + classes.WallCard}>Task Management</span>
+                    </div>
+                    <div className={"col-lg-3 col-md-4 col-sm-6 col-xs-10 row"}>
+                        <span className={"col-md-11 col-sm-11 col-xs-12 " + classes.WallCard}>Task Management</span>
+                    </div>
+                    <div className={"col-lg-3 col-md-4 col-sm-6 col-xs-10 row"}>
+                        <span className={"col-md-11 col-sm-11 col-xs-12 " + classes.WallCard}>Task Management</span>
+                    </div>
+                    <div className={"col-lg-3 col-md-4 col-sm-6 col-xs-10 row"}>
+                        <span className={"col-md-11 col-sm-11 col-xs-12 " + classes.WallCard}>Task Management</span>
+                    </div>
+                    <div className={"col-lg-3 col-md-4 col-sm-6 col-xs-10 row"}>
+                        <span className={"col-md-11 col-sm-11 col-xs-12 " + classes.WallCard}>Task Management</span>
+                    </div>
+                    <div className={"col-lg-3 col-md-4 col-sm-6 col-xs-10 row"}>
+                        <span className={"col-md-11 col-sm-11 col-xs-12 " + classes.Card}>
+                            <i className={"fa fa-plus "+classes.AddIcon}/><br/>
+                            Create New Project Wall
+                        </span>
+                    </div>
+                </div>
+            </div>
         )
     }
 }

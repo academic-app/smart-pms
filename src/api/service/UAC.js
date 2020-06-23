@@ -23,6 +23,12 @@ export function loginWithEmailAndPassword(loginInfo, onSuccess, onFailure) {
     }).catch(error=>console.log(error));
 }
 
+export function fetchUserInfo(uid, callback) {
+    base.ref('/users/' + uid).on('value', function(snapshot) {
+        callback(snapshot.val());
+    });
+}
+
 export function loginWithGoogle(onSuccess, onFailure) {
     app.auth().signInWithPopup(googleAuthProvider).then((result, error)=>{
         if(error){
