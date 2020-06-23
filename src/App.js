@@ -96,7 +96,7 @@ class App extends Component{
         return (
             <div className="App" onScroll={event=>{console.log(event)}}>
                 <header className={"App-header"+(this.state.currentUserId !== null && " logged-in")}>
-                    <h1 id={"app-header"} className={this.state.currentUser !== null && "logged-in"}>SMART TASK MANAGEMENT</h1>
+                    <h1 id={"app-header"} className={this.state.currentUserId !== null && "logged-in"}>SMART TASK MANAGEMENT</h1>
                     {this.state.currentUserId === null && (
                         <React.Fragment>
                             {/*for web browsers*/}
@@ -137,7 +137,7 @@ class App extends Component{
                                             handleLogin={this.handleLogin}
                                             handleRegister={this.handleRegister} />
                     ):(
-                        <Dash/>
+                        <Dash uid={this.state.currentUserId}/>
                     )}
                 </div>
                     {this.state.showLoginForm && (
