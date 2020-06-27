@@ -16,7 +16,7 @@ class Walls extends Component {
 
     hideModal = () =>{
         this.setState({
-            ... this.state,
+            ...this.state,
             showModal: false
         })
     }

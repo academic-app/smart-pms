@@ -2,7 +2,6 @@ import React, {Component} from "react";
 import classes from "./cards.module.css";
 import {addNewCard, fetchCards} from "../../api/service/Cards";
 import CreateForm from "./Form/CreateForm";
-import {addNewBoard} from "../../api/service/Boards";
 import AppModal from "../AppModal/AppModal";
 
 class Cards extends Component{
@@ -16,7 +15,7 @@ class Cards extends Component{
 
     hideModal = () =>{
         this.setState({
-            ... this.state,
+            ...this.state,
             showModal: false
         })
     }

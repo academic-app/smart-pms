@@ -12,14 +12,15 @@ class Dash extends Component{
     }
 
     componentDidMount() {
-        switch (this.state.page) {
-            case Pages.WALL:
-                this.onListWalls();
-                break;
-            case Pages.BOARD:
-                this.onExploreProjectWall(this.state.wid)
-                break;
-        }
+        this.onListWalls();
+        // switch (this.state.page) {
+        //     case Pages.WALL:
+        //         this.onListWalls();
+        //         break;
+        //     case Pages.BOARD:
+        //         this.onExploreProjectWall(this.state.wid)
+        //         break;
+        // }
     }
 
     onListWalls = () => {
