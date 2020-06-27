@@ -1,0 +1,25 @@
+.Board{
+    box-shadow: 0 0 2px 0 rgba(0,0,0,0.3);
+    background-color: white;
+    border-radius: 10px;
+    padding: 5px 10px;
+    cursor: default;
+}
+
+.NewBoard{
+    background-color: white;
+    border-radius: 10px;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.NewBoard:hover{
+    box-shadow: 0 0 2px 0 rgba(0,0,0,0.3);
+}
+
+.Title{
+    text-align: center;
+    background-color: #eee;
+    border-radius: 20px;
+    color: #888;
+}

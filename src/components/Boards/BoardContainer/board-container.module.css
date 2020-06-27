@@ -1,0 +1,11 @@
+.Container{
+    width: 450px;
+    vertical-align: top;
+    padding-right: 10px;
+}
+
+@media only screen and (max-width: 1000px) {
+    .Container {
+        width: 350px;
+    }
+}

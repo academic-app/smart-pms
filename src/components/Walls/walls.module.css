@@ -1,8 +1,16 @@
+.Label{
+    position: fixed;
+    background-color: #ffffff;
+    width: 100%;
+    left: 5px;
+    padding-left: 10px;
+    z-index: 2;
+}
+
 .Dash{
-    padding-top: 20px;
+    padding-top: 40px;
     padding-left: 50px;
     padding-right: 50px;
-    /*background-color: black;*/
 }
 
 .Dash .row{

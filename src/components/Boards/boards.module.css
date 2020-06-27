@@ -1,45 +1,14 @@
-.Wall{
-    padding-top: 20px;
+.Label{
+    position: fixed;
+    background-color: #ffffff;
+    width: 100%;
+    left: 5px;
+    padding-left: 10px;
+    z-index: 2;
+}
+
+.Collection{
+    padding-top: 40px;
     padding-left: 10px;
     overflow-x: scroll;
-}
-
-.BoardContainer{
-    width: 450px;
-    /*border:1px solid black;*/
-    vertical-align: top;
-    padding-right: 10px;
-}
-
-.Board{
-    box-shadow: 0 0 2px 0 rgba(0,0,0,0.3);
-    background-color: white;
-    border-radius: 10px;
-    padding: 5px 10px;
-    cursor: default;
-}
-
-.NewBoard{
-    /*box-shadow: 0 0 1px 0 rgba(0,0,0,0.3);*/
-    background-color: white;
-    border-radius: 10px;
-    padding: 5px 10px;
-    cursor: pointer;
-}
-
-.NewBoard:hover{
-    box-shadow: 0 0 2px 0 rgba(0,0,0,0.3);
-}
-
-.BoardTitle{
-    text-align: center;
-    background-color: #eee;
-    border-radius: 20px;
-    color: #888;
-}
-
-@media only screen and (max-width: 900px) {
-    .BoardContainer {
-        width: 350px;
-    }
 }

@@ -94,7 +94,9 @@ class App extends Component{
 
     render = () => {
         return (
-            <div className="App" onScroll={event=>{console.log(event)}}>
+            <div className="App" onScroll={event=>{
+                //TODO
+            }}>
                 <header className={"App-header"+(this.state.currentUserId !== null && " logged-in")}>
                     <h1 id={"app-header"} className={this.state.currentUserId !== null && "logged-in"}>SMART TASK MANAGEMENT</h1>
                     {this.state.currentUserId === null && (
