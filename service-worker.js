@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/smart-task-management-system/precache-manifest.ba31b93b9ca329a04d7b0f12a1b3cb52.js"
+  "/smart-task-management-system/precache-manifest.e32c9d2dea2d7b36a3012ed8b6ab4c64.js"
 );
 
 self.addEventListener('message', (event) => {
