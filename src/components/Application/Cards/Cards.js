@@ -3,6 +3,7 @@ import classes from "./cards.module.css";
 import {addNewCard, fetchCards} from "../../../api/service/Cards";
 import CreateForm from "./Form/CreateForm";
 import AppModal from "../../../hoc/AppModal/AppModal";
+import {PropagateLoader} from "react-spinners";
 
 class Cards extends Component{
     state={
@@ -66,6 +67,14 @@ class Cards extends Component{
     render() {
         return <React.Fragment>
                     {this.state.cards}
+                    <PropagateLoader
+                        css={`
+                            margin-left:50%
+                        `}
+                        size={20}
+                        color={"#aaa"}
+                        loading={this.state.cards === null}
+                    />
                     <AppModal
                         show={this.state.showModal}
                         onHide={this.hideModal}

@@ -4,6 +4,7 @@
     border-radius: 10px;
     padding: 5px 10px;
     cursor: default;
+    min-height: 99px;
 }
 
 .NewBoard{

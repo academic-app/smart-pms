@@ -16,9 +16,7 @@ export function loginWithEmailAndPassword(loginInfo, onSuccess, onFailure) {
         }else if (response === false){
             onFailure("username or password not valid");
         }else if ('user' in response){
-            base.ref('/users/' + response.user.uid).once('value').then(function(snapshot) {
-                onSuccess(response.user, snapshot.val());
-            });
+            fetchOnceUserInfo(response.user.uid, userInfo => onSuccess(response.user, userInfo));
         }
     }).catch(error=>console.log(error));
 }
@@ -29,12 +27,33 @@ export function fetchUserInfo(uid, callback) {
     });
 }
 
+export function fetchOnceUserInfo(uid, callback) {
+    base.ref('/users/' + uid).once('value').then(function(snapshot) {
+        callback(snapshot.val());
+    });
+}
+
 export function loginWithGoogle(onSuccess, onFailure) {
     app.auth().signInWithPopup(googleAuthProvider).then((result, error)=>{
         if(error){
             onFailure("Authentication Failed. Try other way to log in");
         }else{
-            onSuccess(result.user);
+            fetchOnceUserInfo(result.user.uid, userInfo => {
+                if(userInfo === null){
+                    console.log("...")
+                    const name = (result.user.displayName && result.user.displayName.trim() !== "")? result.user.displayName : result.user.email.split("@")[0];
+                    const username = name.toLowerCase().split(" ").join(".");
+                    const userInfo = {
+                        name: name,
+                        username: username,
+                        email: result.user.email
+                    };
+                    base.ref('users/' + result.user.uid).set(userInfo);
+                    onSuccess(result.user, userInfo);
+                }else{
+                    onSuccess(result.user, userInfo);
+                }
+            })
         }
     })
 }
@@ -47,7 +66,8 @@ export function register(user, onSuccess, onFailure) {
             if(result.user !== null && result.user.uid !== null) {
                 base.ref('users/' + result.user.uid).set({
                     name: user.name,
-                    username: user.username
+                    username: user.username,
+                    email: user.email
                 });
                 onSuccess(result.user);
             }

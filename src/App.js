@@ -112,7 +112,17 @@ class App extends Component{
 
     getMenus = () => {
         return this.state.currentUserId ? (
-            <AppMenus userInfo={this.state.currentUser}/>
+            <AppMenus
+                userInfo={this.state.currentUser}
+                onUserLogOut={()=>{
+                    localStorage.removeItem("c-us");
+                    this.setState({
+                        ...this.state,
+                        currentUserId: null,
+                        currentUser: null
+                    })
+                }}
+            />
         ):(
             <UAMenus
                 onLoginAction={this.onLoginAction}
@@ -140,6 +150,7 @@ class App extends Component{
     getUAForms = () => {
         return this.state.currentUserId === null && (
             <UAForms
+                loginEmail={this.state.loginEmail}
                 showLoginForm={this.state.showLoginForm}
                 showRegistrationForm={this.state.showRegistrationForm}
                 onUserLoggedIn={this.onUserLoggedIn}

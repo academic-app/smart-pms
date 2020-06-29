@@ -11,9 +11,7 @@ class UAForms extends Component{
     }
 
     onLoginWithGoogle = () => {
-        loginWithGoogle((user) => {
-            this.onUserLoggedIn(user, null);
-        }, this.props.onLoginFailed);
+        loginWithGoogle(this.onUserLoggedIn, this.props.onLoginFailed);
     }
 
     onUserLoggedIn = (user, userInfo) => {

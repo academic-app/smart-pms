@@ -8,6 +8,7 @@ import CreateForm from "./Form/CreateForm";
 import BoardContainer from "./BoardContainer/BoardContainer";
 import Board from "./Board/Board";
 import BoardHolder from "./BoardHolder/BoardHolder";
+import {PropagateLoader} from "react-spinners";
 
 class Boards extends Component {
 
@@ -125,8 +126,18 @@ class Boards extends Component {
         return (
             <React.Fragment>
                 <label className={classes.Label}><i className={"fa fa-th-large"}/>&nbsp;<b>Boards In This Wall:</b></label>
-                <div className={classes.Collection}>
+                <div className={classes.Collection} style={{
+                    minHeight: (window.innerHeight - 50)+"px"
+                }}>
                     {this.state.holder}
+                    <PropagateLoader
+                        css={`
+                            margin-left:50%
+                        `}
+                        size={20}
+                        color={"#aaa"}
+                        loading={this.state.holder === null}
+                    />
                 </div>
                 <AppModal
                     show={this.state.showModal}
