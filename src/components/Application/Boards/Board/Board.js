@@ -14,9 +14,6 @@ function Board(props) {
             canDrop: !!monitor.canDrop()
         }),
     })
-    const style = {
-
-    }
     return(
         <div ref={drop} className={"card "+ props.className} onClick={props.onClick}>
             { props.title && <p className={classes.Title}>{props.title}</p> }
