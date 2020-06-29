@@ -4,6 +4,7 @@ import {addNewWall, fetchWalls} from "../../../api/service/Walls";
 import AppModal from "../../../hoc/AppModal/AppModal";
 import CreateWallForm from "./Form/CreateWallForm";
 import {DotLoader} from "react-spinners";
+import NewWall from "./NewWall/NewWall";
 
 class Walls extends Component {
 
@@ -28,7 +29,7 @@ class Walls extends Component {
                 walls: walls? Object.keys(walls).map(wid=>(
                     <div key={wid} className={"col-lg-3 col-md-4 col-sm-6 col-xs-10 row"}>
                         <span
-                            className={"col-md-11 col-sm-11 col-xs-12 " + classes.WallCard}
+                            className={"col-md-11 col-sm-11 col-xs-12 " + classes.Card}
                             onClick={()=>this.props.onExploreProjectWall(wid)}>
                             { walls[wid].name }
                         </span>
@@ -73,12 +74,7 @@ class Walls extends Component {
                             color={"#aaa"}
                             loading={this.state.walls === null}
                         />
-                        <div className={"col-lg-3 col-md-4 col-sm-6 col-xs-10 row"}>
-                            <span className={"col-md-11 col-sm-11 col-xs-12 " + classes.Card} onClick={this.onCreateNewWall}>
-                                <i className={"fa fa-plus "+classes.AddIcon}/><br/>
-                                Create New Project Wall
-                            </span>
-                        </div>
+                        <NewWall onCreate={this.onCreateNewWall}/>
                     </div>
                 </div>
                 <AppModal
