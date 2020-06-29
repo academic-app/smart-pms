@@ -1,0 +1,98 @@
+#App-Header {
+    position: fixed;
+    background-color: #f8f8f8;
+    font-size: calc(10px + 2vmin);
+    width: 100%;
+    height: 48px;
+    z-index: 10;
+    cursor: default;
+}
+
+#App-Header.logged-in {
+    background-color: #ffffff;
+}
+
+#App-Name{
+    color: #333;
+    font-family: "Cantarell", sans-serif;
+    font-weight: 200;
+    margin-left: 50px;
+}
+
+#App-Name.logged-in{
+    margin-left: 10px;
+}
+
+#App-Logo {
+    position: fixed;
+    width: 50%;
+    height: 80%;
+    pointer-events: none;
+    left: 25%;
+    top:5%;
+    align-items: center;
+    z-index: 0;
+}
+
+#App-Content.logged-in{
+    position: relative;
+    top: 48px;
+}
+
+/*Portrait Modes*/
+@media only screen and (max-width: 900px) {   /* screen width: Tab or less */
+    #App-Logo {
+        width: 80%;
+        height: 60%;
+        left: 10%;
+        top: 0;
+    }
+}
+@media only screen and (max-width: 780px) {   /* screen width: Tab II or less */
+    #App-Name{
+        font-size: 25pt;
+    }
+}
+@media only screen and (max-width: 600px) { /* screen width: mobile phones or less */
+    #App-Name{
+        margin-left: 10px;
+        margin-right: 10px;
+        width: 70%;
+        font-size: 23pt;
+    }
+}
+@media only screen and (max-width: 569px) {
+    #App-Header{
+        height: 80px;
+    }
+    #App-Content{
+        top: 80px;
+    }
+}
+@media only screen and (max-width: 300px) { /* screen width: small screen devices */
+    #App-Header{
+        height: 95px;
+    }
+    #App-Name{
+        font-size: 19pt;
+        width: 55%;
+    }
+    #App-Content{
+        top: 95px;
+    }
+    @media only screen and (max-height: 400px) {
+        #App-Logo{
+            top:40%
+        }
+    }
+}
+@media only screen and (max-height: 700px) {
+    #App-Logo{
+        top:15%
+    }
+}
+@media only screen and (max-height: 300px) {
+    #App-Logo{
+        top:30%
+    }
+}

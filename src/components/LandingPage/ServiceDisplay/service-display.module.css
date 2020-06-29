@@ -1,0 +1,60 @@
+.serviceBroadcastArea{
+    width: 30%;
+    position: absolute;
+    top: 25%;
+    left: 10%;
+    color: gray;
+    font-family: "Droid Sans Mono", monospace;
+    font-size: 16pt;
+    text-transform: lowercase;
+}
+
+/*.App-Link {*/
+/*    color: #61dafb;*/
+/*}*/
+
+/*cursor blink animation*/
+.displayCursor{
+    animation: cursor-blink infinite 0.50s ;
+}
+
+/*cursor blink animation*/
+@keyframes cursor-blink {
+    from {
+        color: dimgray;
+    }
+    to {
+        color: #fafafa;
+    }
+}
+
+@media only screen and (max-width: 900px) {   /* screen width: Tab or less */
+    .serviceBroadcastArea{
+        width: 50%;
+    }
+}
+@media only screen and (max-width: 780px) {   /* screen width: Tab II or less */
+    .serviceBroadcastArea{
+        width: 70%;
+    }
+}
+@media only screen and (max-width: 600px) { /* screen width: mobile phones or less */
+    .serviceBroadcastArea{
+        width: 80%;
+    }
+}
+@media only screen and (max-width: 410px) { /* screen width: mobile phones or less */
+    .serviceBroadcastArea{
+        top: 30%;
+    }
+}
+@media only screen and (max-height: 355px) {
+    .serviceBroadcastArea{
+        top: 35%;
+    }
+}
+@media only screen and (max-height: 200px) {
+    .serviceBroadcastArea{
+        top: 55%;
+    }
+}

@@ -1,0 +1,89 @@
+#logInBtn, #registerBtn{
+    position: absolute;
+    display: none;
+    z-index: 3;
+    top: -5px;
+    right: 1px;
+}
+#logInBtn{
+    right: 111px;
+}
+
+#l-logInBtn, #l-registerBtn{
+    padding: 2px 10px;
+    font-size: 11pt;
+    color: #fafafa;
+    border-radius: 15px;
+    position: absolute;
+    top:10px;
+    right: 150px;
+    cursor: pointer;
+    z-index: 5;
+}
+#l-logInBtn {
+    right: 225px;
+    background-color: blue;
+}
+#l-registerBtn {
+    background-color: brown;
+}
+
+/*Portrait Modes*/
+@media only screen and (max-width: 900px) {   /* screen width: Tab or less */
+    #l-logInBtn, #l-registerBtn{
+        display: none;
+    }
+    #logInBtn, #registerBtn{
+        display: block;
+        font-size: 12pt;
+    }
+}
+@media only screen and (max-width: 780px) {   /* screen width: Tab II or less */
+    #logInBtn, #registerBtn{
+        font-size: 10pt;
+        padding: 1px 5px;
+    }
+    #logInBtn{
+        right: 1px;
+    }
+    #registerBtn{
+        top: 20px
+    }
+}
+@media only screen and (max-width: 600px) { /* screen width: mobile phones or less */
+    #logInBtn, #registerBtn{
+        font-size: 11pt;
+        padding: 8px 5px;
+    }
+    #logInBtn{
+        right: 91px;
+    }
+    #registerBtn{
+        top: -5px
+    }
+}
+@media only screen and (max-width: 410px) { /* screen width: mobile phones or less */
+    #logInBtn, #registerBtn{
+        font-size: 10pt;
+        padding: 1px 5px;
+    }
+    #logInBtn{
+        right: 1px;
+    }
+    #registerBtn{
+        top: 20px;
+    }
+}
+@media only screen and (max-width: 300px) { /* screen width: small screen devices */
+    #logInBtn, #registerBtn{
+        font-size: 8pt;
+        padding: 1px 5px;
+    }
+    #logInBtn{
+        top: -2px;
+        right: 1px;
+    }
+    #registerBtn{
+        top: 20px;
+    }
+}

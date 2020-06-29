@@ -1,0 +1,70 @@
+.menus{
+    position:absolute;
+    top: 0;
+    right: 0;
+}
+
+.user-label{
+    margin-right: 20px;
+    margin-top: 15px;
+    background-color: black;
+    color: whitesmoke;
+    padding:5px;
+    border-radius: 30px;
+    font-size: 14pt;
+    cursor: pointer;
+    width: 38px;
+    height: 38px;
+    text-align: center;
+}
+
+.user-label:hover{
+    background-color: gray;
+}
+
+.notification-bell{
+    margin-right: 15px;
+    cursor: pointer;
+}
+
+.notification-bell:hover{
+    color: gray;
+}
+
+.tachometer{
+    margin-right: 15px;
+    cursor: pointer;
+}
+
+.tachometer:hover{
+    color: gray;
+}
+
+/*Portrait Modes*/
+@media only screen and (max-width: 900px) {   /* screen width: Tab or less */
+    .user-label{
+        margin-top: 5px;
+        margin-right: 5px;
+    }
+}
+@media only screen and (max-width: 569px) {
+    .user-label{
+        margin-top: 15px;
+        margin-right: 15px;
+    }
+}
+@media only screen and (max-width: 350px) {
+    .user-label{
+        margin-top: 10px;
+    }
+    .notification-bell{
+        position: absolute;
+        margin-top: 47px;
+        right: 0;
+    }
+    .tachometer{
+        position: absolute;
+        margin-top: 47px;
+        right: 18px;
+    }
+}

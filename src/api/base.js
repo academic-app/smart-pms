@@ -7,7 +7,7 @@ import "firebase/auth";
 import "firebase/analytics";
 import "firebase/database";
 
-// Your web app's Firebase configuration
+// web app's Firebase configuration
 const firebaseConfig = {
     apiKey: "AIzaSyDQSL_YD4ndOnhBDm-UWao9XkkAnXVG7Ww",
     authDomain: "smart-pms-1797e.firebaseapp.com",
