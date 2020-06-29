@@ -34,24 +34,25 @@ class Boards extends Component {
     componentDidMount() {
         fetchBoards(this.props.uid, this.props.wallId, boards => {
             let _boards = null;
+            const bids = boards? Object.keys(boards) : null;
             if(boards !== null) {
-                console.log("invoked " + boards.length)
-                _boards = boards.map(board => (
+                _boards = bids.map(bid => (
                     <BoardContainer
-                        key={board.bid}
-                        total={boards.length}
-                        width={this.calculateContainerWidth(boards.length)}
+                        key={bid}
+                        total={bids.length}
+                        width={this.calculateContainerWidth(bids.length)}
                     >
                         <Board
+                            bid={bid}
                             className={boardClasses.Board}
-                            title={board.title}
+                            title={boards[bid].title}
                         >
-                            <Cards bid={board.bid}/>
+                            <Cards bid={bid}/>
                         </Board>
                     </BoardContainer>
                 ));
             }
-            const total = boards? boards.length : 0;
+            const total = bids? bids.length : 0;
             this.setState({
                 totalBoards: total,
                 holder: (
@@ -62,7 +63,7 @@ class Boards extends Component {
                     >
                         {_boards}
                         <BoardContainer total={total} width={this.calculateContainerWidth(total)}>
-                            <Board className={boardClasses.NewBoard} onClick={this.onAddNewBoard}>
+                            <Board bid={null} className={boardClasses.NewBoard} onClick={this.onAddNewBoard}>
                                 <span><i className={"fa fa-plus"}/>&nbsp;&nbsp;Add New Board</span>
                             </Board>
                         </BoardContainer>
@@ -115,7 +116,7 @@ class Boards extends Component {
     }
 
     createNewBoard = board => {
-        addNewBoard(this.props.uid, this.props.wallId, this.state.totalBoards, board.title, board.description, e=>{
+        addNewBoard(this.props.uid, this.props.wallId, board.title, board.description, e=>{
             if(!e){
                 this.hideModal();
             }

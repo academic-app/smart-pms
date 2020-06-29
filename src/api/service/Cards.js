@@ -7,19 +7,28 @@ export function fetchCards(bid, callback) {
     });
 }
 
-export function addNewCard(bid, index, title, description, callback) {
+export function addNewCard(bid, title, description, callback) {
     const cid = uuidv4();
-    base.ref('/cards/' + bid+"/"+index).set({
-        "cid":cid,
-        "title":title
+    base.ref('/cards/' + bid + "/" + cid).set({
+        "title":title,
+        "createdOn": new Date().toString()
     }, error=>{
         if(!error) {
             base.ref('/card-info/' + cid).set({
-                "description": description,
-                "createdOn": new Date().toString()
+                "description": description
             }, error => {
                 callback(error)
             });
+        }else callback(error);
+    });
+}
+
+export function moveCard(cid, card, boardSource, boardDest, callback) {
+    base.ref('/cards/' + boardSource + "/" + cid).remove(error=>{
+        if(!error) {
+            base.ref('/cards/' + boardDest + "/" + cid).set({
+                ...card
+            }, callback);
         }else callback(error);
     });
 }

@@ -7,16 +7,15 @@ export function fetchWalls(uid, callback) {
     });
 }
 
-export function addNewWall(uid, index, name, description, callback) {
+export function addNewWall(uid, name, description, callback) {
     const wid = uuidv4();
-    base.ref('/walls/' + uid+"/"+index).set({
-        "wid":wid,
-        "name":name
+    base.ref('/walls/' + uid+"/"+wid).set({
+        "name":name,
+        "createdOn": new Date().toString()
     }, error=>{
         if(!error) {
             base.ref('/wall-info/' + wid).set({
                 "description": description,
-                "createdOn": new Date().toString(),
                 "isTemplate": false
             }, error => {
                 callback(error)

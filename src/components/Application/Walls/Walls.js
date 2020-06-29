@@ -8,7 +8,6 @@ import {DotLoader} from "react-spinners";
 class Walls extends Component {
 
     state = {
-        totalWalls: 0,
         walls: null,
         showModal: false,
         modalTitle: null,
@@ -26,16 +25,15 @@ class Walls extends Component {
         fetchWalls(this.props.uid, walls => {
             this.setState({
                 ...this.state,
-                totalWalls: (walls||[]).length,
-                walls: (walls||[]).map(wall=>(
-                    <div key={wall.wid} className={"col-lg-3 col-md-4 col-sm-6 col-xs-10 row"}>
+                walls: walls? Object.keys(walls).map(wid=>(
+                    <div key={wid} className={"col-lg-3 col-md-4 col-sm-6 col-xs-10 row"}>
                         <span
                             className={"col-md-11 col-sm-11 col-xs-12 " + classes.WallCard}
-                            onClick={()=>this.props.onExploreProjectWall(wall.wid)}>
-                            { wall.name }
+                            onClick={()=>this.props.onExploreProjectWall(wid)}>
+                            { walls[wid].name }
                         </span>
                     </div>
-                ))
+                )):""
             });
         })
     }
@@ -53,7 +51,7 @@ class Walls extends Component {
     }
 
     createNewWall = (wall) => {
-        addNewWall(this.props.uid, this.state.totalWalls, wall.name, wall.description, e=>{
+        addNewWall(this.props.uid, wall.name, wall.description, e=>{
             if(!e){
                 this.hideModal();
             }

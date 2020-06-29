@@ -24,3 +24,12 @@
     border-radius: 20px;
     color: #888;
 }
+
+.DropSuggestion{
+    opacity: 0.7;
+    background-color: #ddd;
+    border-radius: 5px;
+    border-style: dashed;
+    margin-bottom: 10px;
+    padding: 10px;
+}

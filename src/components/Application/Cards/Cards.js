@@ -4,10 +4,10 @@ import {addNewCard, fetchCards} from "../../../api/service/Cards";
 import CreateForm from "./Form/CreateForm";
 import AppModal from "../../../hoc/AppModal/AppModal";
 import {PropagateLoader} from "react-spinners";
+import Card from "./Card/Card";
 
 class Cards extends Component{
     state={
-        totalCards:0,
         cards: null,
         showModal: false,
         modalTitle: null,
@@ -34,7 +34,7 @@ class Cards extends Component{
     }
 
     createNewCard = card => {
-        addNewCard(this.props.bid, this.state.totalCards, card.title, card.description, e=>{
+        addNewCard(this.props.bid, card.title, card.description, e=>{
             if(!e){
                 this.hideModal();
             }
@@ -44,12 +44,15 @@ class Cards extends Component{
     componentDidMount() {
         fetchCards(this.props.bid, cards => {
             this.setState({
-                totalCards: (cards || []).length,
                 cards:  <React.Fragment>
-                            {(cards || []).map(card => (
-                                <div key={card.cid} className={"card " + classes.Card}>
-                                    {card.title}
-                                </div>
+                            {cards && Object.keys(cards).map(cid => (
+                                <Card
+                                    key={cid}
+                                    cid={cid}
+                                    bid={this.props.bid}
+                                    title={cards[cid].title}
+                                    model={cards[cid]}
+                                />
                             ))}
                             <div
                                 className={"card "+classes.Card}

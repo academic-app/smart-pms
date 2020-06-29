@@ -7,16 +7,15 @@ export function fetchBoards(uid, wid, callback) {
     });
 }
 
-export function addNewBoard(uid, wid, index, title, description, callback) {
+export function addNewBoard(uid, wid, title, description, callback) {
     const bid = uuidv4();
-    base.ref('/boards/' + uid+"/"+wid+"/"+index).set({
-        "bid":bid,
-        "title":title
+    base.ref('/boards/' + uid+"/"+wid+"/"+bid).set({
+        "title":title,
+        "createdOn": new Date().toString()
     }, error=>{
         if(!error) {
             base.ref('/board-info/' + bid).set({
-                "description": description,
-                "createdOn": new Date().toString()
+                "description": description
             }, error => {
                 callback(error)
             });

@@ -1,7 +1,7 @@
 import React, {Component} from "react";
 import {Button, Form} from "react-bootstrap";
 import MdEditor from "for-editor";
-import getMdEditorConfig from "../../../../api/util/MdEditorConfig/MdEditorConfig";
+import {mdEditorConfig} from "../../../../api/util/MdEditorConfig/MdEditorConfig";
 
 class CreateWallForm extends Component{
     state={
@@ -38,7 +38,7 @@ class CreateWallForm extends Component{
                 <Form.Group>
                     <Form.Label>Wall Description</Form.Label>
                     <MdEditor ref={this.$vm}
-                              toolbar={getMdEditorConfig()}
+                              toolbar={mdEditorConfig}
                               language={"en"}
                               placeholder={"Give description for this wall. (Markdown supported)"}
                               name={"description"}

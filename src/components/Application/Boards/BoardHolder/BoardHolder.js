@@ -1,21 +1,25 @@
 import React from "react";
 import classes from "./board-holder.module.css";
+import {DndProvider} from "react-dnd";
+import {HTML5Backend} from "react-dnd-html5-backend";
 
 function BoardHolder(props) {
     return(
-        <table
-            className={"board-holder "+classes.Table}
-            style={{
-                width: props.width,
-                height: props.height
-            }}
-        >
-            <tbody>
+        <DndProvider backend={HTML5Backend}>
+            <table
+                className={"board-holder "+classes.Table}
+                style={{
+                    width: props.width,
+                    height: props.height
+                }}
+            >
+                <tbody>
                 <tr>
                     {props.children}
                 </tr>
-            </tbody>
-        </table>
+                </tbody>
+            </table>
+        </DndProvider>
     );
 }
 
