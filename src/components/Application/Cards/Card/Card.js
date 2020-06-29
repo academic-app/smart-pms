@@ -27,6 +27,8 @@ function Card(props){
             ref={drag}
             className={"card " + classes.Card}
             style={isDragging? style : null}
+
+            onClick={}
         >
             {props.title}
         </div>
