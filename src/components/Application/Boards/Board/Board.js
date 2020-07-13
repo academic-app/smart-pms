@@ -4,12 +4,15 @@ import {useDrag} from "react-dnd";
 import {DragTypes} from "../../../../api/util/DragTypes";
 
 function Board(props) {
-    const [{}, drag] = useDrag({
+    const [{isDragging}, drag] = useDrag({
         item: {
             index: props.index,
             type: DragTypes.BOARD,
             boardId: props.bid,
-        }
+        },
+        collect: (monitor) => ({
+            isCardDragging: !!monitor.isDragging()
+        })
     })
     return(
         <div ref={props.index !== undefined? drag : null} className={"card "+ props.className} onClick={props.onClick}>
