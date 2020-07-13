@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "04aebd475e7fd2d3316df7e4cc26b373",
+    "revision": "974a229f004c271580d095bfb941dd5d",
     "url": "/smart-task-management-system/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/smart-task-management-system/static/css/2.0040f42c.chunk.css"
   },
   {
-    "revision": "500efc6b43df224ba2d7",
+    "revision": "d713a8ba039b080e80c1",
     "url": "/smart-task-management-system/static/css/main.9a3cbd93.chunk.css"
   },
   {
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/smart-task-management-system/static/js/2.5b16bf5a.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "500efc6b43df224ba2d7",
-    "url": "/smart-task-management-system/static/js/main.adfec18f.chunk.js"
+    "revision": "d713a8ba039b080e80c1",
+    "url": "/smart-task-management-system/static/js/main.5f9c86b9.chunk.js"
   },
   {
     "revision": "229dd4acbe36cfa586d0",
