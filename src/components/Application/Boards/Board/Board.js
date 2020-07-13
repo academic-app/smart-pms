@@ -1,6 +1,6 @@
 import React from "react";
 import classes from "./board.module.css";
-import {useDrag, useDrop} from "react-dnd";
+import {useDrag} from "react-dnd";
 import {DragTypes} from "../../../../api/util/DragTypes";
 
 function Board(props) {
