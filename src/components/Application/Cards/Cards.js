@@ -1,6 +1,5 @@
 import React, {Component} from "react";
-import classes from "./cards.module.css";
-import {addNewCard, fetchCards} from "../../../api/service/Cards";
+import {addNewCard, fetchCards, fetchOrderedCards} from "../../../api/service/Cards";
 import CreateForm from "./Form/CreateForm";
 import AppModal from "../../../hoc/AppModal/AppModal";
 import {PropagateLoader} from "react-spinners";
@@ -42,27 +41,32 @@ class Cards extends Component{
     }
 
     componentDidMount() {
-        fetchCards(this.props.bid, cards => {
-            this.setState({
-                cards:  <React.Fragment>
-                            {cards && Object.keys(cards).map(cid => (
+        fetchOrderedCards(this.props.bid, cids => {
+            fetchCards(this.props.bid, cards => {
+                this.setState({
+                    cards:  (
+                        <React.Fragment>
+                            <Card
+                                cid={null}
+                                index={0}
+                                bid={this.props.bid}
+                                onClick={this.onCreateNewCard}
+                            >
+                                <i className={"fa fa-plus"}/>&nbsp;Add New Card
+                            </Card>
+                            {cids && cards && cids.map((cid, index) => cards[cid] && (
                                 <Card
                                     key={cid}
+                                    index={index+1}
                                     cid={cid}
                                     bid={this.props.bid}
                                     title={cards[cid].title}
                                     model={cards[cid]}
                                 />
                             ))}
-                            <div
-                                className={"card "+classes.Card}
-                                style={{
-                                    fontSize:"9pt",
-                                    textAlign:"center"
-                                }} onClick={this.onCreateNewCard}>
-                                <i className={"fa fa-plus"}/>&nbsp;Add New Card
-                            </div>
                         </React.Fragment>
+                    )
+                })
             })
         })
     }

@@ -1,7 +1,7 @@
 import React, {Component} from "react";
 import classes from "./boards.module.css"
 import boardClasses from "./Board/board.module.css"
-import {addNewBoard, fetchBoards} from "../../../api/service/Boards";
+import {addNewBoard, fetchBoards, fetchOrderedBoards} from "../../../api/service/Boards";
 import Cards from "../Cards/Cards";
 import AppModal from "../../../hoc/AppModal/AppModal";
 import CreateForm from "./Form/CreateForm";
@@ -32,44 +32,34 @@ class Boards extends Component {
      * Add event listener
      */
     componentDidMount() {
-        fetchBoards(this.props.uid, this.props.wallId, boards => {
+        fetchOrderedBoards(this.props.uid, this.props.wallId, bids => {
             let _boards = null;
-            const bids = boards? Object.keys(boards) : null;
-            if(boards !== null) {
-                _boards = bids.map(bid => (
-                    <BoardContainer
-                        key={bid}
-                        total={bids.length}
-                        width={this.calculateContainerWidth(bids.length)}
-                    >
-                        <Board
-                            bid={bid}
-                            className={boardClasses.Board}
-                            title={boards[bid].title}
+            bids && fetchBoards(this.props.uid, this.props.wallId, boards=>{
+                _boards = bids.map((bid, index) => {
+                    const board = boards[bid];
+                    return (
+                        <BoardContainer
+                            index={index}
+                            key={bid}
+                            uid={this.props.uid}
+                            wid={this.props.wallId}
+                            total={bids.length}
+                            width={this.calculateContainerWidth(bids.length)}
                         >
-                            <Cards bid={bid}/>
-                        </Board>
-                    </BoardContainer>
-                ));
-            }
-            const total = bids? bids.length : 0;
-            this.setState({
-                totalBoards: total,
-                holder: (
-                    <BoardHolder
-                        total={total}
-                        width={this.calculateHolderWidth(total)}
-                        height={(window.innerHeight - 100)+"px"}
-                    >
-                        {_boards}
-                        <BoardContainer total={total} width={this.calculateContainerWidth(total)}>
-                            <Board bid={null} className={boardClasses.NewBoard} onClick={this.onAddNewBoard}>
-                                <span><i className={"fa fa-plus"}/>&nbsp;&nbsp;Add New Board</span>
+                            <Board
+                                index={index}
+                                bid={bid}
+                                className={boardClasses.Board}
+                                title={board.title}
+                            >
+                                <Cards bid={bid}/>
                             </Board>
                         </BoardContainer>
-                    </BoardHolder>
-                )
-            })
+                    )
+                })
+                this.updateHolder((bids||[]).length, _boards);
+            });
+            this.updateHolder((bids||[]).length, _boards);
         });
         window.addEventListener("resize", () =>{
             let items = document.getElementsByClassName("board-container");
@@ -80,6 +70,26 @@ class Boards extends Component {
                 this.calculateHolderWidth(this.state.totalBoards);
             document.getElementsByClassName("board-holder")[0].style.height = (window.innerHeight - 100) + "px";
         });
+    }
+
+    updateHolder(total, boards){
+        this.setState({
+            totalBoards: total,
+            holder: (
+                <BoardHolder
+                    total={total}
+                    width={this.calculateHolderWidth(total)}
+                    height={(window.innerHeight - 100)+"px"}
+                >
+                    {boards}
+                    <BoardContainer index={total} uid={this.props.uid} wid={this.props.wallId} total={total} width={this.calculateContainerWidth(total)}>
+                        <Board bid={null} className={boardClasses.NewBoard} onClick={this.onAddNewBoard}>
+                            <span><i className={"fa fa-plus"}/>&nbsp;&nbsp;Add New Board</span>
+                        </Board>
+                    </BoardContainer>
+                </BoardHolder>
+            )
+        })
     }
 
     calculateContainerWidth(totalBoards){
@@ -107,7 +117,7 @@ class Boards extends Component {
         const newState = {
             ...this.state,
             showModal: true,
-            modalTitle: "Add New BoardContainer",
+            modalTitle: "Add New Board",
             modalBody: <CreateForm
                 onSubmit={this.createNewBoard}
                 onCancel={this.hideModal}/>
