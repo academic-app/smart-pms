@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/smart-task-management-system/static/css/main.9a3cbd93.chunk.css",
-    "main.js": "/smart-task-management-system/static/js/main.adfec18f.chunk.js",
-    "main.js.map": "/smart-task-management-system/static/js/main.adfec18f.chunk.js.map",
+    "main.js": "/smart-task-management-system/static/js/main.5f9c86b9.chunk.js",
+    "main.js.map": "/smart-task-management-system/static/js/main.5f9c86b9.chunk.js.map",
     "runtime-main.js": "/smart-task-management-system/static/js/runtime-main.214541b9.js",
     "runtime-main.js.map": "/smart-task-management-system/static/js/runtime-main.214541b9.js.map",
     "static/css/2.0040f42c.chunk.css": "/smart-task-management-system/static/css/2.0040f42c.chunk.css",
     "static/js/2.5b16bf5a.chunk.js": "/smart-task-management-system/static/js/2.5b16bf5a.chunk.js",
     "static/js/2.5b16bf5a.chunk.js.map": "/smart-task-management-system/static/js/2.5b16bf5a.chunk.js.map",
     "index.html": "/smart-task-management-system/index.html",
-    "precache-manifest.1f054b91c36bf8445afd140efd50dba1.js": "/smart-task-management-system/precache-manifest.1f054b91c36bf8445afd140efd50dba1.js",
+    "precache-manifest.68444e94ceae12886e1a22bffed71cea.js": "/smart-task-management-system/precache-manifest.68444e94ceae12886e1a22bffed71cea.js",
     "service-worker.js": "/smart-task-management-system/service-worker.js",
     "static/css/2.0040f42c.chunk.css.map": "/smart-task-management-system/static/css/2.0040f42c.chunk.css.map",
     "static/css/main.9a3cbd93.chunk.css.map": "/smart-task-management-system/static/css/main.9a3cbd93.chunk.css.map",
@@ -23,6 +23,6 @@
     "static/css/2.0040f42c.chunk.css",
     "static/js/2.5b16bf5a.chunk.js",
     "static/css/main.9a3cbd93.chunk.css",
-    "static/js/main.adfec18f.chunk.js"
+    "static/js/main.5f9c86b9.chunk.js"
   ]
 }
