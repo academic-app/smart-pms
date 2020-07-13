@@ -15,7 +15,14 @@ function Board(props) {
         })
     })
     return(
-        <div ref={props.index !== undefined? drag : null} className={"card "+ props.className} onClick={props.onClick}>
+        <div
+            ref={props.index !== undefined? drag : null}
+            className={"card "+ props.className}
+            onClick={props.onClick}
+            style={{
+                opacity: isDragging?"0.7": "1"
+            }}
+        >
             {
                 props.bid && (
                     <React.Fragment>
